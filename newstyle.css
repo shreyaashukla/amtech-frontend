@@ -265,6 +265,10 @@ body.scrolled .dynamic-banner {
     color: var(--text-primary);
 }
 
+.navbar.scrolled .hamburger {
+    color: var(--text-primary);
+}
+
 .menu-icon {
     height: 50px;
     width: auto;
@@ -1250,7 +1254,7 @@ img {
     display: none;
     cursor: pointer;
     font-size: 24px;
-    color: var(--text-primary);
+    color: white;
 }
 
 .sidebar-overlay {
@@ -1305,10 +1309,6 @@ img {
     .why-grid {
         grid-template-columns: repeat(2, 1fr);
     }
-}
-
-/* Base Mobile (max-width: 768px) */
-@media (max-width: 768px) {
 
     /* Navbar & Sidebar Mechanics */
     .navbar {
@@ -1368,6 +1368,12 @@ img {
     .close-btn:hover {
         color: #ffffff;
     }
+}
+
+/* Base Mobile (max-width: 768px) */
+@media (max-width: 768px) {
+
+
 
     /* Grids to 1 Column */
     .gallery-box,
