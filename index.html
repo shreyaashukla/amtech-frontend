@@ -606,8 +606,12 @@ form.addEventListener("submit", async (e) => {
   button.innerText = "Submitting...";
   button.disabled = true;
 
+  const API_URL = (location.hostname === "localhost" || location.hostname === "127.0.0.1" || location.protocol === "file:") 
+    ? "http://localhost:5000/enquiry" 
+    : "https://amtech-backend1.onrender.com/enquiry";
+
   try {
-    const res = await fetch("https://amtech-backend1.onrender.com/enquiry", {
+    const res = await fetch(API_URL, {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -616,7 +620,7 @@ form.addEventListener("submit", async (e) => {
     });
 
     if (res.ok) {
-      alert("Enquiry submitted successfully!");
+      showSuccessModal();
       form.reset();
     } else {
       alert("Something went wrong, please try again.");
@@ -709,6 +713,119 @@ form.addEventListener("submit", async (e) => {
             navLinks.forEach(link => {
                 link.addEventListener('click', closeSidebar);
             });
+        });
+    </script>
+    <!-- Custom Success Dialog -->
+    <div class="custom-modal-overlay" id="successModal">
+        <div class="custom-modal">
+            <div class="modal-icon">
+                <i class="fa-solid fa-circle-check"></i>
+            </div>
+            <h3>Thank You!</h3>
+            <p>Your enquiry has been received. Our team will contact you shortly.</p>
+            <button onclick="closeSuccessModal()">Close</button>
+        </div>
+    </div>
+
+    <style>
+        .custom-modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(11, 16, 30, 0.8);
+            backdrop-filter: blur(12px);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 10000;
+        }
+
+        .custom-modal-overlay.active {
+            display: flex;
+            animation: fadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .custom-modal {
+            background: var(--bg-deep, #0B101E);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 24px;
+            padding: 50px 40px;
+            text-align: center;
+            max-width: 450px;
+            width: 90%;
+            transform: scale(0.9) translateY(20px);
+            transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+        }
+
+        .custom-modal-overlay.active .custom-modal {
+            transform: scale(1) translateY(0);
+        }
+
+        .modal-icon {
+            font-size: 70px;
+            color: var(--accent-blue, #1666D1);
+            margin-bottom: 25px;
+            filter: drop-shadow(0 0 20px rgba(22, 102, 209, 0.4));
+        }
+
+        .custom-modal h3 {
+            color: #fff;
+            font-family: 'Clash Display', sans-serif;
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            letter-spacing: -0.01em;
+        }
+
+        .custom-modal p {
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 35px;
+            line-height: 1.7;
+            font-size: 17px;
+        }
+
+        .custom-modal button {
+            background: var(--accent-blue, #1666D1);
+            color: #fff;
+            border: none;
+            padding: 16px 50px;
+            border-radius: 40px;
+            font-weight: 700;
+            font-size: 15px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.4s var(--transition, ease);
+            box-shadow: 0 10px 25px rgba(22, 102, 209, 0.3);
+        }
+
+        .custom-modal button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px rgba(22, 102, 209, 0.5);
+            filter: brightness(1.1);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+
+    <script>
+        function showSuccessModal() {
+            document.getElementById('successModal').classList.add('active');
+        }
+
+        function closeSuccessModal() {
+            document.getElementById('successModal').classList.remove('active');
+        }
+
+        // Auto-close modal after 5 seconds
+        document.getElementById('successModal').addEventListener('click', (e) => {
+            if (e.target.id === 'successModal') closeSuccessModal();
         });
     </script>
 </body>
