@@ -1319,7 +1319,7 @@ img {
         position: fixed;
         width: 100%;
         top: 40px;
-        z-index: 997;
+        z-index: 1001;
     }
 
     .hamburger {
@@ -1450,6 +1450,16 @@ img {
         grid-template-columns: 1fr;
         gap: 40px;
         text-align: left;
+    }
+
+    .footer,
+    .footer-col {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        position: relative !important;
+        z-index: 999 !important;
+        transform: none !important;
     }
 }
 
