@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Amtech Elevators</title>
+    <link href="https://api.fontshare.com/v2/css?f[]=clash-display@200,300,400,500,600,700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="newstyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body style="scroll-behavior: smooth;">
+
+    <!-- DYNAMIC OPENING SOON BANNER -->
+    <div class="dynamic-banner" id="dynamicBanner">
+        <!-- Default State: Pill -->
+        <div class="banner-pill">
+            <span class="pulse-dot"></span>
+            <span class="pill-text">Opening Soon</span>
+            <i class="fa-solid fa-chevron-down banner-icon"></i>
+        </div>
+        <!-- Expanded State: Locations -->
+        <div class="banner-expanded">
+            <div class="locations-grid">
+                <span>Karnataka</span>
+                <span class="dot-separator">&bull;</span>
+                <span>Kerala</span>
+                <span class="dot-separator">&bull;</span>
+                <span>Andhra Pradesh</span>
+                <span class="dot-separator">&bull;</span>
+                <span>Tamil Nadu</span>
+                <span class="dot-separator">&bull;</span>
+                <span>Telangana</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ELEVATOR PRELOADER -->
+    <div id="elevator-preloader">
+        <div class="loader-logo">
+            <img src="images/newlogo.png" alt="Amtech">
+        </div>
+        <div class="door door-left"></div>
+        <div class="door door-right"></div>
+    </div>
+
+    <a href="https://wa.me/9900633131" class="whatsapp-float" target="_blank">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <div class="page-bg"></div>
+
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <header class="navbar" id="navbar">
+        <div class="logo">
+            <img src="images/newlogo.png" alt="Amtech Logo" class="menu-icon">
+        </div>
+
+        <div class="hamburger" id="hamburgerBtn">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+
+        <nav id="navMenu">
+            <div class="close-btn" id="closeBtn">
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+            <a href="#home" class="nav-link">Home</a>
+            <a href="#about" class="nav-link">About</a>
+            <a href="#products" class="nav-link">Products</a>
+            <a href="#services" class="nav-link">Services</a>
+            <a href="#contact" class="nav-link">Contact</a>
+        </nav>
+    </header>
+
+    <!-- <section class="hero">
+  <div class="hero-content">
+    <h1>
+      Designed in Italy,<br>
+      <span>Built in India</span>
+    </h1>
+
+    <p>
+      Experience the perfect blend of Italian design and Indian craftsmanship.
+    </p>
+
+    <a href="#" class="hero-btn">Request a Quote</a>
+  </div>
+</section> -->
+
+    <!-- <section class="hero">
+    <h1 class="hero-title">
+        Designed in Italy, Built in India
+    </h1>
+
+  <div class="hero-images">
+
+    <div class="hero-card">
+      <img src="images/4.png" alt="">
+    </div>
+
+    <div class="hero-card">
+      <img src="images/3.png" alt="">
+    </div>
+    <div class="hero-card">
+      <img src="images/image_1024x1024.png" alt="">
+    </div>
+    </div>
+    <div class="hero-content">
+        <p>Experience the perfect blend of Italian design and Indian craftsmanship.</p>
+        <a href="#" class="hero-btn">Request a Quote</a>
+    </div>
+  
+
+</section> -->
+
+    <section class="hero-slider" id="home">
+
+        <!-- Slide 1 -->
+        <div class="slide active">
+            <img src="images/NewHero1amtech.webp" alt="" loading="eager">
+            <!-- HERO TEXT -->
+            <div class="hero-overlay">
+                <h1 class="hero-title">
+                    Designed in Italy, Built in India
+                </h1>
+                <p>
+                    Experience premium residential elevators blending Italian elegance with Indian engineering.
+                </p>
+                <a href="#contact" class="hero-btn">Request a Quote</a>
+            </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="slide">
+            <img src="images/NewHero2amtech (2).webp" alt="" loading="lazy">
+            <div class="hero-overlay">
+                <h1 class="hero-title">
+                    Luxury Home Elevators
+                </h1>
+                <p>
+                    Designed for modern homes, our elevators complement premium interiors with minimalist elegance.
+                </p>
+                <a href="#products" class="hero-btn">Explore Products</a>
+            </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="slide">
+            <img src="images/NewHero3amtech (2).webp" alt="" loading="lazy">
+            <div class="hero-overlay">
+                <h1 class="hero-title">
+                    Safe. Silent. Seamless.
+                </h1>
+                <p>
+                    Advanced technology focused on comfort, safety and smooth vertical mobility.
+                </p>
+                <a href="#contact" class="hero-btn">Book Consultation</a>
+            </div>
+        </div>
+
+        <!-- DOTS (manual slide change) -->
+        <div class="slider-dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+
+    </section>
+
+    <section class="about" id="about">
+        <h2 data-aos="fade-up">About Amtech</h2>
+        <hr class="divider">
+
+        <div class="about-box">
+
+            <div class="about-image" data-aos="fade-right">
+                <img src="images/newabout.png" alt="Elevator" loading="lazy">
+            </div>
+
+            <div class="about-text" data-aos="fade-left">
+                <h3>Engineering Vertical Mobility</h3>
+
+                <p class="about-desc">
+                    At Amtech Elevators, our philosophy is rooted in the seamless fusion of authentic Italian design
+                    inspiration and unyielding Indian engineering precision. We view vertical mobility not just as
+                    transport, but as a defined architectural experience.
+                </p>
+                <p class="about-desc">
+                    With a strong presence of nearly 15 years in the industry, Amtech Elevators has consistently delivered excellence, elevating standards in both residential and commercial spaces.
+                </p>
+                <p class="about-desc">
+                    With an uncompromising commitment to safety and quality, our systems are built from premium
+                    materials and installed by masterful technicians. Every elevator is an investment into the future of
+                    your modern home or commercial space.
+                </p>
+
+                <blockquote class="about-quote">
+                    "Elevating spaces with designs that speak luxury and engineering that ensures absolute peace of
+                    mind."
+                </blockquote>
+
+                <button class="about-btn"
+                    onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Learn
+                    More</button>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ================= PREMIUM VIDEO SHOWCASE ================= -->
+    <section class="video-showcase" id="experience" data-aos="fade-up">
+        <div class="video-container" id="videoContainer">
+            <video id="amtechVideo" autoplay loop muted playsinline controls class="premium-video">
+                <source src="images/Amtech_video_website.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </section>
+
+    <section class="gallery" id="products">
+        <h2 data-aos="fade-up">Our Products</h2>
+        <hr class="divider">
+        <div class="gallery-box">
+
+            <div class="gallery-card" data-aos="zoom-in" data-aos-delay="200">
+                <div class="gallery-image-wrapper">
+                    <img src="images/Newp1amtech.webp" alt="Lumina Collection" loading="lazy">
+                </div>
+                <h3 class="gallery-title">Panoramic Residential Elevator</h3>
+            </div>
+
+            <div class="gallery-card" data-aos="zoom-in" data-aos-delay="600">
+                <div class="gallery-image-wrapper">
+                    <img src="images/Newp2amtech.webp" alt="Nova Cab" loading="lazy">
+                </div>
+                <h3 class="gallery-title">Standard Stainless Steel Elevator</h3>
+            </div>
+
+            <!-- <div class="gallery-card" data-aos="zoom-in" data-aos-delay="100">
+                <div class="gallery-image-wrapper">
+                    <img src="images/p4new.webp" alt="Aeterna Series" loading="lazy">
+                </div>
+                <h3 class="gallery-title">Compact glass elevator</h3>
+            </div> -->
+
+            <!-- <div class="gallery-card" data-aos="zoom-in" data-aos-delay="400">
+                <div class="gallery-image-wrapper">
+                    <img src="images/P3hydraulic.webp" alt="Astralis Design" loading="lazy">
+                </div>
+                <h3 class="gallery-title">Signature Hydraulic Circular Lift</h3>
+            </div> -->
+
+            <div class="gallery-card" data-aos="zoom-in" data-aos-delay="300">
+                <div class="gallery-image-wrapper">
+                    <img src="images/Newp3amtech.webp" alt="Vetro Glass Lift" loading="lazy">
+                </div>
+                <h3 class="gallery-title">Minimal Panoramic Residential Lift</h3>
+            </div>
+
+            <div class="gallery-card" data-aos="zoom-in" data-aos-delay="500">
+                <div class="gallery-image-wrapper">
+                    <img src="images/Newp4amtech.webp" alt="Stella Edition" loading="lazy">
+                </div>
+                <h3 class="gallery-title">Luxury panoramic lift</h3>
+            </div>
+        </div>
+    </section>
+
+    <section class="services" id="services">
+        <h2 data-aos="fade-up">Our Services</h2>
+        <hr class="divider">
+        <div class="service-grid">
+
+            <div class="card" data-aos="fade-up" data-aos-delay="100" data-tilt data-tilt-max="5" data-tilt-speed="400"
+                data-tilt-glare="true" data-tilt-max-glare="0.2">
+                <img src="images/installation.jpg" alt="Installation" loading="lazy">
+                <h3>Installation</h3>
+                <hr class="divider">
+            </div>
+
+            <div class="card" data-aos="fade-up" data-aos-delay="200" data-tilt data-tilt-max="5" data-tilt-speed="400"
+                data-tilt-glare="true" data-tilt-max-glare="0.2">
+                <img src="images/maintainance.png" alt="Maintenance" loading="lazy">
+                <h3>Maintenance</h3>
+                <hr class="divider">
+            </div>
+
+            <div class="card" data-aos="fade-up" data-aos-delay="300" data-tilt data-tilt-max="5" data-tilt-speed="400"
+                data-tilt-glare="true" data-tilt-max-glare="0.2">
+                <img src="images/modernizationnew.png" alt="Modernization" loading="lazy">
+                <h3>Modernization</h3>
+                <hr class="divider">
+            </div>
+
+        </div>
+    </section>
+
+    <section class="stats" data-aos="zoom-in">
+
+        <div class="stat-box">
+            <h3 class="counter" data-target="500">0</h3>
+            <p>Installations</p>
+        </div>
+
+        <div class="stat-box">
+            <h3 class="counter" data-target="10" data-plus="true">0</h3>
+            <p>Years Experience</p>
+        </div>
+
+        <div class="stat-box">
+            <h3 class="counter" data-target="100" data-plus="true">0</h3>
+            <p>Happy Clients</p>
+        </div>
+
+        <div class="stat-box">
+            <h3 class="counter" data-target="24">0</h3>
+            <p>Support Available</p>
+        </div>
+
+    </section>
+
+    <section class="why-us" id="why-us">
+        <h2 data-aos="fade-up">Why Choose Amtech</h2>
+        <hr class="divider">
+
+        <div class="why-grid">
+
+            <div class="why-card" data-aos="fade-up" data-aos-delay="100" data-tilt data-tilt-max="3"
+                data-tilt-speed="400">
+                <div class="why-number">01</div>
+                <h3>Curated Product Range</h3>
+                <p>We offer a curated range of products, from minimalist essentials to ultra-luxury designs.</p>
+            </div>
+
+            <div class="why-card" data-aos="fade-up" data-aos-delay="200" data-tilt data-tilt-max="3"
+                data-tilt-speed="400">
+                <div class="why-number">02</div>
+                <h3>Expert Installation</h3>
+                <p>Professional engineers ensuring precision and safety.</p>
+            </div>
+
+            <div class="why-card" data-aos="fade-up" data-aos-delay="300" data-tilt data-tilt-max="3"
+                data-tilt-speed="400">
+                <div class="why-number">03</div>
+                <h3>Reliable Service</h3>
+                <p>Quick response and dependable maintenance support.</p>
+            </div>
+
+            <div class="why-card" data-aos="fade-up" data-aos-delay="400" data-tilt data-tilt-max="3"
+                data-tilt-speed="400">
+                <div class="why-number">04</div>
+                <h3>Modern Designs</h3>
+                <p>Elegant elevator solutions for modern buildings.</p>
+            </div>
+
+            <div class="why-card" data-aos="fade-up" data-aos-delay="500" data-tilt data-tilt-max="3"
+                data-tilt-speed="400">
+                <div class="why-number">05</div>
+                <h3>Safety First</h3>
+                <p>Engineered and installed with safety standards tailored to your expectations.</p>
+            </div>
+
+            <div class="why-card" data-aos="fade-up" data-aos-delay="600" data-tilt data-tilt-max="3"
+                data-tilt-speed="400">
+                <div class="why-number">06</div>
+                <h3>Comprehensive Home Lifts</h3>
+                <p>Packed and thoughtfully designed home lift solutions for seamless everyday comfort.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- <section class="contact-luxury">
+
+    <h2 class="contact-title">Contact Us</h2>
+
+    <div class="contact-card">
+
+        <h3>Request a Visit</h3>
+
+        <form class="contact-form">
+
+            <input type="text" placeholder="Full name">
+            <input type="email" placeholder="E-mail">
+            <input type="text" placeholder="Phone">
+
+            <textarea placeholder="Message"></textarea>
+
+            <button type="submit">CONTACT</button>
+
+        </form>
+
+    </div>
+
+</section> -->
+
+    <section class="contact-page" id="contact">
+
+        <!-- TOP HERO -->
+        <div class="contact-hero">
+            <h2 data-aos="fade-up">Request a Consultation</h2>
+            <hr class="divider">
+            <p>Connect with our experts for premium home elevator solutions and
+                seamless support.</p>
+        </div>
+
+        <!-- CONTENT -->
+        <div class="contact-wrapper">
+
+            <!-- FORM -->
+            <form class="contact-form-box" id="contactForm" data-aos="fade-right">
+                <h3>Request a Quote</h3>
+
+                <input type="text" id="name" placeholder="Your full name">
+                <input type="text" id="phone" placeholder="Phone Number">
+                <input type="text" id="city" placeholder="City / Pincode">
+                <textarea id="message" placeholder="Message"></textarea>
+
+                <button type="submit">SUBMIT</button>
+            </form>
+
+            <!-- DETAILS -->
+            <div class="contact-details" data-aos="fade-left">
+                <h3>Contact Details</h3>
+
+                <p><strong>📞 Phone</strong><br> <a href="tel:+91 9986158237" class="hover-link">+91 9986158237</a></p>
+
+                <p><strong>✉ Email</strong><br> <a href="mailto:contact@amtechelevator.in"
+                        class="hover-link">contact@amtechelevator.in</a></p>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- <footer>
+    © 2026 Amtech Elevators
+</footer> -->
+
+    <footer class="footer">
+        <div class="footer-container">
+
+            <!-- COMPANY INFO -->
+            <div class="footer-col" data-aos="fade-up" data-aos-delay="100">
+                <h3 class="footer-logo">AMTECH</h3>
+                <p>
+                    Premium architectural vertical mobility.<br>
+                    Engineered for modern luxury spaces.
+                </p>
+            </div>
+
+            <!-- LINKS -->
+            <div class="footer-col" data-aos="fade-up" data-aos-delay="200">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- CONTACT -->
+            <div class="footer-col" data-aos="fade-up" data-aos-delay="300">
+                <p>📞 <a href="tel:+91 9986158237" class="footer-link-subtle">+91 9986158237</a></p>
+                <div class="footer-divider-mini"></div>
+                <p>✉️ <a href="mailto:contact@amtechelevators.com"
+                        class="footer-link-subtle">contact@amtechelevators.com</a></p>
+                <div class="footer-divider-mini"></div>
+                <p>📍 <strong>Address:</strong><br>
+                    <!-- #191/1, 1st C Main<br>
+                    Manjunatha Nagar<br> -->
+                    BSK 3rd Stage<br>
+                    Bangalore 560085
+                </p>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p class="copyright">
+                © 2026 Amtech Elevators
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        const slides = document.querySelectorAll(".slide");
+        const dots = document.querySelectorAll(".dot");
+        let currentSlide = 0;
+        let slideInterval;
+
+        function goToSlide(n) {
+            slides.forEach(s => s.classList.remove("active"));
+            dots.forEach(d => d.classList.remove("active"));
+
+            currentSlide = n;
+            slides[currentSlide].classList.add("active");
+            dots[currentSlide].classList.add("active");
+        }
+
+        function nextSlide() {
+            let nextIndex = (currentSlide + 1) % slides.length;
+            goToSlide(nextIndex);
+        }
+
+        function startSlideShow() {
+            slideInterval = setInterval(nextSlide, 5000);
+        }
+
+        function resetSlideShow() {
+            clearInterval(slideInterval);
+            startSlideShow();
+        }
+
+        dots.forEach((dot, index) => {
+            dot.addEventListener("click", () => {
+                goToSlide(index);
+                resetSlideShow();
+            });
+        });
+
+        startSlideShow();
+    </script>
+
+    <script>
+
+        const counters = document.querySelectorAll('.counter');
+
+        const startCounter = (counter) => {
+            const target = +counter.getAttribute('data-target');
+
+            const update = () => {
+                const count = +counter.innerText;
+                const increment = target / 100;
+
+                if (count < target) {
+                    counter.innerText = Math.ceil(count + increment);
+                    setTimeout(update, 20);
+                } else {
+                    if (counter.dataset.plus === "true") {
+                        counter.innerText = target + "+";
+                    } else {
+                        counter.innerText = target;
+                    }
+                }
+            };
+
+            update();
+        };
+
+        const counterObserver = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    startCounter(entry.target);
+                    counterObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        counters.forEach(counter => {
+            counterObserver.observe(counter);
+        });
+
+    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'cubic-bezier(0.22, 1, 0.36, 1)',
+            once: true
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    </script>
+    <script>
+        const form = document.querySelector("form");
+const button = form.querySelector("button");
+
+form.addEventListener("submit", async (e) => {
+  e.preventDefault();
+
+  const data = {
+    name: document.getElementById("name").value,
+    phone: document.getElementById("phone").value,
+    city: document.getElementById("city").value,
+    message: document.getElementById("message").value
+  };
+
+  // 👇 Show instant feedback
+  button.innerText = "Submitting...";
+  button.disabled = true;
+
+  try {
+    const res = await fetch("https://amtech-backend1.onrender.com/enquiry", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(data)
+    });
+
+    if (res.ok) {
+      alert("Enquiry submitted successfully!");
+      form.reset();
+    } else {
+      alert("Something went wrong, please try again.");
+    }
+
+  } catch (err) {
+    alert("Server not responding. Please try again.");
+  }
+
+  // 👇 Restore button
+  button.innerText = "Submit";
+  button.disabled = false;
+});
+    </script>
+
+    <!-- VanillaTilt.js for 3D card interactions -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
+
+    <!-- Cinematic Video Scroll Expansion -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const videoContainer = document.getElementById('videoContainer');
+            
+            if (videoContainer) {
+                // Cinematic Scroll Expansion
+                window.addEventListener('scroll', () => {
+                    const rect = videoContainer.getBoundingClientRect();
+                    const windowCenter = window.innerHeight / 2;
+                    const elementCenter = rect.top + (rect.height / 2);
+                    
+                    const distance = Math.abs(windowCenter - elementCenter);
+                    const maxDist = window.innerHeight; // Distance at which scaling starts
+                    
+                    let progress = 1 - (distance / maxDist);
+                    progress = Math.max(0, Math.min(1, progress));
+                    
+                    // Scale from 0.85 to 1.05
+                    const scaleValue = 0.85 + (0.2 * progress);
+                    // Radius from 30px to 0px
+                    const radiusValue = 30 * (1 - progress);
+                    
+                    videoContainer.style.transform = `scale(${scaleValue})`;
+                    videoContainer.style.borderRadius = `${radiusValue}px`;
+                });
+                
+                // Trigger scroll once to set initial state
+                window.dispatchEvent(new Event('scroll'));
+            }
+        });
+    </script>
+
+    <!-- Elevator Preloader Logic -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const preloader = document.getElementById('elevator-preloader');
+            // Give time for the light line and logo animation before opening doors
+            setTimeout(() => {
+                preloader.classList.add('loaded');
+            }, 600);
+
+            // Remove from DOM after doors fully open
+            setTimeout(() => {
+                preloader.style.display = 'none';
+            }, 2300);
+        });
+    </script>
+    <!-- Sidebar Navigation Logic -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const hamburgerBtn = document.getElementById('hamburgerBtn');
+            const closeBtn = document.getElementById('closeBtn');
+            const navMenu = document.getElementById('navMenu');
+            const sidebarOverlay = document.getElementById('sidebarOverlay');
+            const navLinks = document.querySelectorAll('.nav-link');
+
+            function openSidebar() {
+                navMenu.classList.add('active');
+                sidebarOverlay.classList.add('active');
+            }
+
+            function closeSidebar() {
+                navMenu.classList.remove('active');
+                sidebarOverlay.classList.remove('active');
+            }
+
+            hamburgerBtn.addEventListener('click', openSidebar);
+            closeBtn.addEventListener('click', closeSidebar);
+            sidebarOverlay.addEventListener('click', closeSidebar);
+
+            navLinks.forEach(link => {
+                link.addEventListener('click', closeSidebar);
+            });
+        });
+    </script>
+</body>
+
+</html>
